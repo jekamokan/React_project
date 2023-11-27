@@ -1,0 +1,128 @@
+
+.navigation{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    &__wrapper{
+        max-width: 1350px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 18px;
+        list-style: none;
+        margin-right: 130px;
+        & a{
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            padding-bottom: 5px;
+            &::before{
+                content: '';
+                height: 2px;
+                background-color: #000;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                position: absolute;
+                transition: all .3s;
+            }
+            &:hover::before{
+                width: 100%;
+            }
+        }
+        .active {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    &__item{
+        display: none;
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__item-active{
+        align-items: center;
+        font-size: 22px;
+        text-transform: capitalize;
+        font-weight: 600;
+        & a{
+            &:hover:before{
+                width: 0;
+            }
+        }
+    }
+    & img{
+        width: 200px;
+        margin-right: auto;
+    }
+    &__authorization{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        & button{
+            padding: 10px 20px;
+            margin: 0;
+            border-radius: 10px;
+            background-color: #fcd270;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+    }
+    &__cart{
+        width: 50px;
+        height: 50px;
+        background: url('./../../images/cart.png') no-repeat;
+        background-size: contain;
+        position: relative;
+    }
+    
+    &__cart-count{
+        display: block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: rgb(236, 63, 63);
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: -7px;
+        font-size: 16px;
+    }
+}
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.modal.active{
+    transform: scale(1);
+}
+.modal__content{
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+}

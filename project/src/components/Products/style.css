@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.products {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.products__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+.products__title {
+  position: relative;
+  margin: 50px 0;
+}
+.products__title::before {
+  content: "ТОВАРИ";
+  position: absolute;
+  left: 0;
+  font-size: 70px;
+  color: rgba(0, 0, 0, 0.1);
+}
+.products__title p {
+  font-size: 30px;
+  padding-top: 20px;
+}
+.products__pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}

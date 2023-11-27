@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto; */
+}
+
+code {
+  font-family: 'Merriweather', serif;
+}

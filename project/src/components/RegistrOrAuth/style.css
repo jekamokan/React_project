@@ -1,0 +1,12 @@
+.registrorauth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.registrorauth p {
+  text-align: center;
+}
+.registrorauth__buttons:first-child {
+  font-size: 40px;
+}

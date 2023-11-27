@@ -1,0 +1,125 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+.navigation__wrapper {
+  max-width: 1350px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  list-style: none;
+  margin-right: 130px;
+}
+.navigation__list a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 5px;
+}
+.navigation__list a::before {
+  content: "";
+  height: 2px;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  position: absolute;
+  transition: all 0.3s;
+}
+.navigation__list a:hover::before {
+  width: 100%;
+}
+.navigation__list .active::before {
+  width: 100%;
+}
+.navigation__item {
+  display: none;
+}
+.navigation__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navigation__item-active {
+  align-items: center;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.navigation__item-active a:hover:before {
+  width: 0;
+}
+.navigation img {
+  width: 200px;
+  margin-right: auto;
+}
+.navigation__authorization {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.navigation__authorization button {
+  padding: 10px 20px;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #fcd270;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.navigation__cart {
+  width: 50px;
+  height: 50px;
+  background: url("./../../images/cart.png") no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.navigation__cart-count {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgb(236, 63, 63);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  font-size: 16px;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+.modal__content {
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fff;
+  width: 400px;
+  height: 400px;
+}

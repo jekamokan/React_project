@@ -1,0 +1,8 @@
+.newproducts__title {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.newproducts__content {
+  display: flex;
+  justify-content: space-between;
+}

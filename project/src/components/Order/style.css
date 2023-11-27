@@ -1,0 +1,51 @@
+.order {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.order__btn {
+  background: url("./../../images/trash-can.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+}
+.order__img {
+  margin-right: 150px;
+  width: 50px;
+  height: 49px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 5px;
+}
+.order__bin {
+  margin-left: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.order__bin:hover {
+  transform: scale(1.2);
+}
+.order__price {
+  margin-left: auto;
+}
+.order__name {
+  width: 300px;
+}
+.order__count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.order__count span {
+  padding: 5px 7px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.order__count button {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

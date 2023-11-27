@@ -1,0 +1,32 @@
+.products{
+    max-width: 1330px;
+    padding: 0 15px;
+    margin: 0 auto;
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        padding: 50px 0;
+    }
+    &__title{
+        position: relative;
+        margin: 50px 0;
+        &::before{
+            content: 'ТОВАРИ';
+            position: absolute;
+            left: 0;
+            font-size: 70px;
+            color: rgba(0, 0, 0, 0.1);
+        }
+        & p{
+            font-size: 30px;
+            padding-top: 20px;
+        }
+    }
+    &__pagination{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}

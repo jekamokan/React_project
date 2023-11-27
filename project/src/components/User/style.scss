@@ -1,0 +1,75 @@
+.user{
+    max-width: 1350px;
+    margin: 0px auto;
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: 300px;
+        overflow: auto;
+        padding-left: 0;
+        width: 900px;
+        margin-top: 0;
+        background: #ffffff;
+        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        &::-webkit-scrollbar{
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #0000008e;
+        }
+    }
+    &__title{
+        margin-bottom: 50px;
+        position: relative;
+        margin: 50px 0;
+        &::before{
+            content: 'ЗАМОВЛЕННЯ';
+            position: absolute;
+            left: 0;
+            font-size: 70px;
+            color: rgba(0, 0, 0, 0.1);
+        }
+        & p{
+            font-size: 30px;
+            padding: 20px 0 0 4px;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 50px;
+    }
+    &__info{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    &__info-count,
+    &__info-price{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info-price{
+        margin-bottom: 40px;
+    }
+   &__info-btn{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   }
+    
+}

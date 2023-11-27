@@ -1,0 +1,15 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+.footer__wrapper {
+  max-width: 1330px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}

@@ -1,0 +1,13 @@
+.home {
+  max-width: 1330px;
+  padding: 0 15px 100px 15px;
+  margin: 0 auto;
+}
+.home h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-style: italic;
+  z-index: 1;
+  margin-top: 300px;
+}

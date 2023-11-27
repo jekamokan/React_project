@@ -1,0 +1,14 @@
+.scroll__btn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+.scroll__btn img{
+    transform: rotate(180deg);
+    width: 50px;
+}

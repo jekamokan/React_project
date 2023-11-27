@@ -1,0 +1,18 @@
+.inputwithlabel{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+label{
+    text-transform: capitalize;
+}
+input{
+    border: 2px solid #fcd270;
+    background: rgba(252, 210, 112, 0.25);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+input::placeholder{
+    font-family: 'Playpen Sans', cursive;
+}
