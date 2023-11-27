@@ -13,14 +13,6 @@ import Login from '../Authorization/Login';
 
 const Layout = ({ userVisible, authorizationVisible, toggleAuthorizationAndUser, registrationModalActive, setRegistrationModalActive }) => {
   const [loginModalActive, setLoginModalActive] = useState(false)
-  // const [registrationModalActive, setRegistrationModalActive] = useState(false)
-  // const [authorizationVisible, setAuthorizationVisible] = useState(true); 
-  // const [userVisible, setUserVisible] = useState(false);
-  // const toggleAuthorizationAndUser = () => {
-  //   setAuthorizationVisible(false);
-  //   setUserVisible(true);
-  // };
-
   const userData = useSelector(state => state.user)
   const cartData = useSelector(store => store.cart.data)
   let fullCount = 0
@@ -40,17 +32,13 @@ const Layout = ({ userVisible, authorizationVisible, toggleAuthorizationAndUser,
             <li><NavLink to={'/Products'}>Товари</NavLink></li>
             <li><NavLink to={'/Cheesecakes'}>Cheesecakes</NavLink></li>
             <li><NavLink to={'/Cakes'}>Cakes</NavLink></li>
-            <li><NavLink to={'/Forerror'}>For error</NavLink></li>
-            {/* <li className={userVisible ? 'navigation__item-active' : 'navigation__item'} >
-            {userData.login}
-          </li> */}
           </ul>
           <Authorization setLogin={setLoginModalActive} setRegistration={setRegistrationModalActive} authorizationVisible={authorizationVisible} />
           <div className='navigation__user'>
             <div className={userVisible ? 'navigation__item-active' : 'navigation__item'}>
-              {userData.login}
+            <NavLink to={'/User'}>{userData.login}</NavLink>
             </div>
-            <Link to={'/User'}>
+            <Link to={'/Cart'}>
               <div className='navigation__cart'><span className='navigation__cart-count'>{fullCount}</span></div>
             </Link>
           </div>

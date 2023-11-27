@@ -1,11 +1,8 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import NotFoundPage from "../NotFoundPage";
 import HomePage from "../HomePage";
 import Layout from "../Navigation";
 import Cheesecakes from "../Cheesecakes";
 import Cakes from "../Cakes";
-import User from "../User";
-// import { ToastContainer } from "react-toastify";
 import Products from "../Products";
 import { useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
@@ -14,6 +11,8 @@ import ScrollButton from "../ScrollButton";
 import { getCategoriesAC } from "../../redux/reducers/categoriesReducer";
 import { getLimitProductsAC } from "../../redux/reducers/limitProductReducer";
 import SingleProduct from "../SingleProduct";
+import User from "../User";
+import Cart from "../Cart";
 
 
 
@@ -39,8 +38,8 @@ const Header = () => {
       <Route path="Products/:id" element={<SingleProduct />} />
       <Route path="Cheesecakes" element={<Cheesecakes />} />
       <Route path="Cakes" element={<Cakes />} />
-      <Route path="*" element={<NotFoundPage />} />
-      <Route path="User" element={<User
+      <Route path="User/*" element={<User />} />
+      <Route path="Cart" element={<Cart
         authorizationVisible={authorizationVisible}
         toggleAuthorizationAndUser={toggleAuthorizationAndUser}
         registrationModalActive={registrationModalActive}
@@ -60,7 +59,6 @@ const Header = () => {
     <div className="header">
       <RouterProvider router={router} />
       <ScrollButton />
-      {/* <ToastContainer/> */}
     </div>
 
   )

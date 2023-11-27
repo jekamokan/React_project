@@ -1,74 +1,16 @@
-@charset "UTF-8";
-.user {
-  max-width: 1350px;
-  margin: 0px auto;
-}
-.user__list {
+.error {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  height: 300px;
-  overflow: auto;
-  padding-left: 0;
-  width: 900px;
-  margin-top: 0;
-  background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-}
-.user__list::-webkit-scrollbar {
-  width: 10px;
-}
-.user__list::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.5568627451);
-}
-.user__title {
-  margin-bottom: 50px;
-  position: relative;
-  margin: 50px 0;
-}
-.user__title::before {
-  content: "ЗАМОВЛЕННЯ";
-  position: absolute;
-  left: 0;
-  font-size: 70px;
-  color: rgba(0, 0, 0, 0.1);
-}
-.user__title p {
-  font-size: 30px;
-  padding: 20px 0 0 4px;
-}
-.user__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 50px;
-}
-.user__info {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-.user__info-count, .user__info-price {
-  display: flex;
-  justify-content: space-between;
-}
-.user__info-price {
-  margin-bottom: 40px;
-}
-.user__info-btn {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  font-size: 20px;
-  border-radius: 10px;
-  display: flex;
-  padding: 10px 15px;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
+  margin: 50px auto;
+  padding: 40px;
+  font-size: 24px;
+  margin-top: 50px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  width: 900px;
+}
+.error h1 {
+  margin-top: 0;
 }
