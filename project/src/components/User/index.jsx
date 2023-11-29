@@ -1,21 +1,18 @@
 
 import { Route, Routes} from 'react-router-dom';
 import './style.css'
-import NotFoundPageUa from '../NotFoundPageUa';
-import NotFoundPageEng from '../NotFoundPageEng';
-import NotFoundPageRu from '../NotFoundPageRu';
-import LayoutLanguage from '../LayoutLanguage';
+import LayoutUser from '../LayoutUser';
+import MyInfo from '../MyInfo';
+import PersonalOffers from '../PersonalOffers';
 
- const User = () => {
-
+ const User = ({setAuthorizationVisible}) => {
 
   return (
     <Routes>
-      <Route path='/' element={<LayoutLanguage/>}>
-        <Route index  element={<NotFoundPageUa/>}/>
-        <Route path='NotFoundPageUa' element={<NotFoundPageUa/>}/>
-        <Route path='NotFoundPageEng' element={<NotFoundPageEng/>}/>
-        <Route path='NotFoundPageRu' element={<NotFoundPageRu/>}/>
+      <Route path='/' element={<LayoutUser setAuthorizationVisible = {setAuthorizationVisible}/>}>
+        <Route index  element={<MyInfo/>}/>
+        <Route path='MyInfo' element={<MyInfo/>}/>
+        <Route path='PersonalOffers' element={<PersonalOffers/>}/>
       </Route>
     </Routes>
   );

@@ -1,0 +1,38 @@
+.language {
+  padding: 50px 0 100px;
+  display: flex;
+  gap: 50px;
+}
+.language__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 0;
+  font-size: 18px;
+  list-style: none;
+}
+.language__nav a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-left: 15px;
+}
+.language__nav a::before {
+  content: "";
+  width: 4px;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  position: absolute;
+  transition: all 0.3s;
+}
+.language__nav a:hover::before {
+  height: 100%;
+}
+.language__nav .active::before {
+  height: 100%;
+}
+.language p {
+  font-size: 28px;
+}/*# sourceMappingURL=style.css.map */

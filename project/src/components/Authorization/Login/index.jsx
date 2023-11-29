@@ -40,18 +40,18 @@ const Login = ({ toggleAuthorizationAndUser,setActive,}) => {
     <div className={userData.isLoggedIn ? 'login shake' : 'login'}>
       <div className='login__wrapper'>
         <div className='login__content'>
-          <label htmlFor={createId[3]}>Name</label>
+          <label >Name</label>
           <input
-            id={createId[3]}
+            
             type='text'
             onChange={handelUpdateLogin}
             placeholder="Ваше ім'я"
           />
         </div>
         <div className='login__content'>
-          <label htmlFor={createId[4]}>Password</label>
+          <label >Password</label>
           <input
-            id={createId[4]}
+            
             type='password'
             onChange={handelUpdatePassword}
             placeholder='Ваш пароль'

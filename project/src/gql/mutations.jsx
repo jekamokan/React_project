@@ -11,7 +11,7 @@ mutation UserUpsert($user: UserInput) {
 }
 `;
 
-export const ADD_ORDER_IN_USER = gql`
+export const ADD_USERS_ORDER = gql`
 mutation newOrder($goods: [OrderGoodInput]) {
   OrderUpsert(order: {orderGoods: $goods}) {
     _id

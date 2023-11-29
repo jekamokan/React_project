@@ -2,6 +2,7 @@ export const SET_USER_TOKEN = 'SET_USER_TOKEN';
 export const GET_TOKEN_ACTION = 'GET_TOKEN_ACTION';
 export const GET_TOKEN_ACTION2 = 'GET_TOKEN_ACTION2';
 export const SET_USER_AUTHORIZED = 'SET_USER_AUTHORIZED';
+export const LOG_OUT_ACTION = 'LOG_OUT_ACTION';
 
 export const defaultState = {
   login: '',
@@ -36,11 +37,16 @@ export default function userReducer(state = defaultState, action) {
         ...state,
        
       };
+    case LOG_OUT_ACTION:
+      return {
+        ...defaultState,
+       
+      };
     default:
       return state;
   }
 }
-export const getTokenAC = ({ login, email, password, authorized = false }) => ({
+export const getTokenAC = ({ login, email, password }) => ({
   type: GET_TOKEN_ACTION,
   payload: {
     login,
@@ -64,5 +70,8 @@ export const setUserTokenAC = (token) => ({
   payload: {
     token,
   },
+});
+export const logOutAC = () => ({
+  type: LOG_OUT_ACTION,
 });
 

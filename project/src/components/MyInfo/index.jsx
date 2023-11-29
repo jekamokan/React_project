@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const NotFoundPageUa = () => {
+const MyInfo = () => {
     return (
         <div>
             <h1>От халепа!</h1>
@@ -11,4 +11,4 @@ const NotFoundPageUa = () => {
         </div>
     )
 }
-export default NotFoundPageUa
+export default MyInfo

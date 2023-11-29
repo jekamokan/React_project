@@ -59,11 +59,11 @@ const Cart = ({authorizationVisible,toggleAuthorizationAndUser, registrationModa
         <div className="user__info">
           <div className="user__info-count">
             <p>Кількість товарів :</p>
-            <p>{fullCount} шт.</p>
+            <div>{fullCount} шт.</div>
           </div>
           <div className="user__info-price">
             <p>Загальна сума :</p>
-            <p>{fullAmount} грн.</p>
+            <div>{fullAmount} грн.</div>
           </div>
           <button className="user__info-btn" onClick={buyProducts}>Сплатити</button>
         </div>

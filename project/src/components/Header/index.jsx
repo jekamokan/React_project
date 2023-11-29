@@ -13,6 +13,7 @@ import { getLimitProductsAC } from "../../redux/reducers/limitProductReducer";
 import SingleProduct from "../SingleProduct";
 import User from "../User";
 import Cart from "../Cart";
+import './style.css';
 
 
 
@@ -38,7 +39,8 @@ const Header = () => {
       <Route path="Products/:id" element={<SingleProduct />} />
       <Route path="Cheesecakes" element={<Cheesecakes />} />
       <Route path="Cakes" element={<Cakes />} />
-      <Route path="User/*" element={<User />} />
+      <Route path="User/*" element={<User
+        setAuthorizationVisible={setAuthorizationVisible}/>} />
       <Route path="Cart" element={<Cart
         authorizationVisible={authorizationVisible}
         toggleAuthorizationAndUser={toggleAuthorizationAndUser}

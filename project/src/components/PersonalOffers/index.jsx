@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const NotFoundPageEng = () => {
+const PersonalOffers = () => {
     return (
         <div>
             <h1>Ops!</h1>
@@ -11,4 +11,4 @@ const NotFoundPageEng = () => {
         </div>
     )
 }
-export default NotFoundPageEng
+export default PersonalOffers

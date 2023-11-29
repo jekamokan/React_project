@@ -61,7 +61,7 @@ function* sendOrder(action) {
   const  {data}  = action.payload; 
   const res = yield call(() => 
       client.mutate({ 
-        mutation: mutations.ADD_ORDER_IN_USER, 
+        mutation: mutations.ADD_USERS_ORDER, 
         variables: { goods: orderDataUpdate(data) }, 
         context: { 
           headers: { 

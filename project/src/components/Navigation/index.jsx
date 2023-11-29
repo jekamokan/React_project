@@ -10,7 +10,6 @@ import Login from '../Authorization/Login';
 
 
 
-
 const Layout = ({ userVisible, authorizationVisible, toggleAuthorizationAndUser, registrationModalActive, setRegistrationModalActive }) => {
   const [loginModalActive, setLoginModalActive] = useState(false)
   const userData = useSelector(state => state.user)
@@ -36,7 +35,7 @@ const Layout = ({ userVisible, authorizationVisible, toggleAuthorizationAndUser,
           <Authorization setLogin={setLoginModalActive} setRegistration={setRegistrationModalActive} authorizationVisible={authorizationVisible} />
           <div className='navigation__user'>
             <div className={userVisible ? 'navigation__item-active' : 'navigation__item'}>
-            <NavLink to={'/User'}>{userData.login}</NavLink>
+            <NavLink to={'/User/MyInfo'}>{userData.login}</NavLink>
             </div>
             <Link to={'/Cart'}>
               <div className='navigation__cart'><span className='navigation__cart-count'>{fullCount}</span></div>
