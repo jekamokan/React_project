@@ -26,11 +26,28 @@ export const GET_GOODS = gql`
     }
   `;
 
-  export const GET_CATEGORIES_SCHEMA = gql`
-  query getGoods($query: String!) {
+  export const GET_CATEGORIES = gql`
+  query getCategories($query: String!) {
     CategoryFind(query: $query) {
       _id
       name
+    }
+  }
+`;
+  export const GET_ORDERS = gql`
+  query getOrders($query: String!) {
+    OrderFind(query: $query) {
+      _id
+      createdAt
+      total
+      orderGoods {
+        _id
+        createdAt
+        price
+        count
+        goodName
+        total
+      }
     }
   }
 `;

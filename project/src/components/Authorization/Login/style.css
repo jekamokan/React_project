@@ -31,7 +31,7 @@
   width: 100%;
   gap: 20px;
 }
-.shake {
+/* .shake {
   animation: shake 1s;
   box-shadow: aliceblue;
   border-radius: 10px;
@@ -55,4 +55,4 @@
   100% {
     transform: translateX(5px);
   }
-}
+} */

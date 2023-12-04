@@ -8,12 +8,14 @@ import ModalForCartWithoutGood from "../ModalForCartWitoutGood";
 import Login from "../Authorization/Login"
 import Registration from "../Authorization/Registration";
 import { sendProductInUser } from "../../redux/reducers/cartReducer";
+import SuccessfulPurchase from "../SuccessfulPurchase";
 
 
 const Cart = ({authorizationVisible,toggleAuthorizationAndUser, registrationModalActive, setRegistrationModalActive}) => {
   const [registrOrAuthModalActive, setRegistrOrAuthModalActive] = useState(false)
   const [withoutGoodModalActive, setWithoutGoodModalActive] = useState(false)
   const [loginModalActive, setLoginModalActive] = useState(false)
+  const [successfulPurchase, setSuccessfulPurchase] = useState(false)
   // const [registrationModalActive, setRegistrationModalActive] = useState(false)
   
   const userData = useSelector(state => state.user)
@@ -35,6 +37,7 @@ const Cart = ({authorizationVisible,toggleAuthorizationAndUser, registrationModa
       setRegistrOrAuthModalActive(true)
       }else{
    dispatch(sendProductInUser(cartData))
+   setSuccessfulPurchase(true)
   }
     
   } 
@@ -73,6 +76,7 @@ const Cart = ({authorizationVisible,toggleAuthorizationAndUser, registrationModa
       <Modal active={loginModalActive} setActive={setLoginModalActive} children={<Login toggleAuthorizationAndUser={toggleAuthorizationAndUser} setActive={setLoginModalActive} setRegistrationModalActive={setRegistrationModalActive}/>} />
       <Modal active={registrationModalActive} setActive={setRegistrationModalActive} children={<Registration setActive={setRegistrationModalActive} />} />
       <Modal active={loginModalActive} setActive={setLoginModalActive} children={<Login toggleAuthorizationAndUser={toggleAuthorizationAndUser} setActive={setLoginModalActive} setRegistrationModalActive={setRegistrationModalActive}/>} />
+      <Modal active={successfulPurchase} setActive={setSuccessfulPurchase} children={<SuccessfulPurchase/>} />
     </div>
   );
 

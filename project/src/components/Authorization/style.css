@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  margin-left: auto;
 }
 .authorization button {
   padding: 10px 20px;
@@ -14,4 +15,4 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: 600;
-}
+}/*# sourceMappingURL=style.css.map */

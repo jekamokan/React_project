@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-
+import './style.css'
 const MyInfo = () => {
     return (
-        <div>
+        <div className="myinfo">
             <h1>От халепа!</h1>
             <p>Вибачте, сталася несподівана помилка.</p>
             <Link to={'/'}>Натисніть сюди, щоб повернутися на головну сторінку</Link>

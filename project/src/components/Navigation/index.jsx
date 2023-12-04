@@ -29,8 +29,6 @@ const Layout = ({ userVisible, authorizationVisible, toggleAuthorizationAndUser,
           <ul className='navigation__list'>
             <li><NavLink to={"/"} > Головна</NavLink></li>
             <li><NavLink to={'/Products'}>Товари</NavLink></li>
-            <li><NavLink to={'/Cheesecakes'}>Cheesecakes</NavLink></li>
-            <li><NavLink to={'/Cakes'}>Cakes</NavLink></li>
           </ul>
           <Authorization setLogin={setLoginModalActive} setRegistration={setRegistrationModalActive} authorizationVisible={authorizationVisible} />
           <div className='navigation__user'>

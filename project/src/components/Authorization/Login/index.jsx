@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './style.css';
 import 'react-toastify/dist/ReactToastify.css';
-import { createId } from '../../../utils';
 import {
   getTokenAC,
 } from '../../../redux/reducers/userReducer';
@@ -15,12 +14,19 @@ const Login = ({ toggleAuthorizationAndUser,setActive,}) => {
     password: '',
   });
   //////
-  const handelUpdateLogin = (e) => {
-    setUserInfo({ ...userInfo, login: e.target.value });
+  const handleUpdateUser = (field, value) => {
+    setUserInfo((prevUserInfo) => ({
+      ...prevUserInfo,
+      [field]: value
+    }));
   };
-  const handelUpdatePassword = (e) => {
-    setUserInfo({ ...userInfo, password: e.target.value });
-  };
+
+  // const handelUpdateLogin = (e) => {
+  //   setUserInfo({ ...userInfo, login: e.target.value });
+  // };
+  // const handelUpdatePassword = (e) => {
+  //   setUserInfo({ ...userInfo, password: e.target.value });
+  // };
 
   useEffect(() => {
     if (userData.isLoggedIn) {
@@ -42,18 +48,16 @@ const Login = ({ toggleAuthorizationAndUser,setActive,}) => {
         <div className='login__content'>
           <label >Name</label>
           <input
-            
             type='text'
-            onChange={handelUpdateLogin}
+            onChange={(e) => handleUpdateUser('login', e.target.value)}
             placeholder="Ваше ім'я"
           />
         </div>
         <div className='login__content'>
           <label >Password</label>
           <input
-            
             type='password'
-            onChange={handelUpdatePassword}
+            onChange={(e) => handleUpdateUser('password', e.target.value)}
             placeholder='Ваш пароль'
           />
         </div>

@@ -16,18 +16,21 @@ const Registration = ({setActive}) => {
       })
       const dispatch = useDispatch();
       
-      //  const handleUpdate = (value, field) => {
-      //    setUserInfo({...userInfo, field: value})
-      //  }
-      const handleUpdateUserName = (value) => {
-        setUserInfo({...userInfo, login: value})
-      }
-      const handleUpdateUserEmail = (value) => {
-        setUserInfo({...userInfo, email: value})
-      }
-      const handleUpdateUserPassword = (value) => {
-        setUserInfo({...userInfo, password: value})
-      }
+      const handleUpdateUser = (field, value) => {
+        setUserInfo((prevUserInfo) => ({
+          ...prevUserInfo,
+          [field]: value
+        }));
+      };
+      // const handleUpdateUserName = (value) => {
+      //   setUserInfo({...userInfo, login: value})
+      // }
+      // const handleUpdateUserEmail = (value) => {
+      //   setUserInfo({...userInfo, email: value})
+      // }
+      // const handleUpdateUserPassword = (value) => {
+      //   setUserInfo({...userInfo, password: value})
+      // }
       //////// переделать
       const handlePushUserData = () => {
         dispatch(getTokenAC2(userInfo))
@@ -37,9 +40,9 @@ const Registration = ({setActive}) => {
     return (
         <div className="registration">
           <p>Форма реєстрації</p>
-            <InputWithLabel hash={createId[0]} onChange={handleUpdateUserName} placeholder="Ваше ім'я" type='name'/>
-            <InputWithLabel hash={createId[1]} onChange={handleUpdateUserEmail} placeholder="Ваша електронна адреса" type='email'/>
-            <InputWithLabel hash={createId[2]} onChange={handleUpdateUserPassword} placeholder="Ваш пароль" type='password'/>
+            <InputWithLabel hash={createId[0]} onChange={(value) => handleUpdateUser('login', value)} placeholder="Ваше ім'я" type='name'/>
+            <InputWithLabel hash={createId[1]} onChange={(value) => handleUpdateUser('email', value)} placeholder="Ваша електронна адреса" type='email'/>
+            <InputWithLabel hash={createId[2]} onChange={(value) => handleUpdateUser('password', value)} placeholder="Ваш пароль" type='password'/>
             <button onClick={handlePushUserData}>Зареєструватися</button>
         </div>
     )

@@ -28,6 +28,8 @@ function* getLimitProducts(action) {
   }))
   yield put(setLimitProductsAC({ data: res.data.GoodFind }));
 }
+
+
 function* getProducts() {
 
   const res = yield call(() => client.query({
@@ -41,10 +43,11 @@ function* getProducts() {
   yield put(setProductsAC({ data: res.data.GoodFind }));
 }
 
+
 function* getCategories() {
 
   const res = yield call(() => client.query({
-    query: queries.GET_CATEGORIES_SCHEMA,
+    query: queries.GET_CATEGORIES,
     variables: {
       query: JSON.stringify([
         {},
@@ -54,8 +57,9 @@ function* getCategories() {
     }
   }))
   yield put(setCategoriesAC({ data: res.data.CategoryFind }));
-
 }
+
+
 function* sendOrder(action) { 
   const token = yield select(state=>state.user.token) 
   const  {data}  = action.payload; 

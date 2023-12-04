@@ -3,6 +3,7 @@ export const GET_TOKEN_ACTION = 'GET_TOKEN_ACTION';
 export const GET_TOKEN_ACTION2 = 'GET_TOKEN_ACTION2';
 export const SET_USER_AUTHORIZED = 'SET_USER_AUTHORIZED';
 export const LOG_OUT_ACTION = 'LOG_OUT_ACTION';
+export const GET_ORDERS_ACTION = 'GET_ORDERS_ACTION';
 
 export const defaultState = {
   login: '',
@@ -40,7 +41,6 @@ export default function userReducer(state = defaultState, action) {
     case LOG_OUT_ACTION:
       return {
         ...defaultState,
-       
       };
     default:
       return state;
@@ -73,5 +73,8 @@ export const setUserTokenAC = (token) => ({
 });
 export const logOutAC = () => ({
   type: LOG_OUT_ACTION,
+});
+export const getOrdersAC = () => ({
+  type: GET_ORDERS_ACTION,
 });
 

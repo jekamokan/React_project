@@ -1,7 +1,7 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom"
 import './style.css'
 import { useDispatch } from "react-redux"
-import { logOutAC } from "../../redux/reducers/userReducer"
+import { getOrdersAC, logOutAC } from "../../redux/reducers/userReducer"
 const LayoutUser = ({ setAuthorizationVisible }) => {
 
     const dispatch = useDispatch()
@@ -11,11 +11,14 @@ const LayoutUser = ({ setAuthorizationVisible }) => {
         setAuthorizationVisible(true)
         navigate('/')
     }
+    const getOrders = () => {
+        dispatch(getOrdersAC())
+    }
     return (
         <div className="language">
             <ul className="language__nav">
                 <li><NavLink to={'MyInfo'} >Мій кабінет</NavLink></li>
-                <li><NavLink to={'PersonalOffers'}>Персональні пропозиції</NavLink></li>
+                <li><NavLink to={'PersonalOffers'} onClick={getOrders}>Персональні пропозиції</NavLink></li>
                 <li>
                     <button
                         onClick={logOut}>

@@ -3,6 +3,7 @@ export const REMOVE_FROM_CART_ACTION = 'REMOVE_FROM_CART_ACTION';
 export const ADD_PRODUCT_IN_CART_ACTION = 'ADD_PRODUCT_IN_CART_ACTION';
 export const REMOVE_PRODUCT_IN_CART_ACTION = 'REMOVE_PRODUCT_IN_CART_ACTION';
 export const SEND_PRODUCT_IN_USER_ACTION = 'SEND_PRODUCT_IN_USER_ACTION';
+export const RESET_CART_AFTER_SENT_ACTION = 'RESET_CART_AFTER_SENT_ACTION'
 
 const defaultState = {
   data: [],
@@ -94,6 +95,10 @@ export default function cartReducer(state = defaultState, action) {
         };
       }
       break;
+      case RESET_CART_AFTER_SENT_ACTION:
+        return {
+          ...defaultState,
+        }
     default:
       return state;
   }
@@ -132,3 +137,6 @@ export const sendProductInUser = (data) => ({
     data
   },
 });
+export const resetCartAfterSent = () => ({
+  type: RESET_CART_AFTER_SENT_ACTION,
+})

@@ -1,7 +1,7 @@
 import { put, takeEvery, call } from "redux-saga/effects";
 
 import {client} from '../..'
-import { GET_TOKEN_ACTION, GET_TOKEN_ACTION2, setUserTokenAC } from "../reducers/userReducer";
+import { GET_ORDERS_ACTION, GET_TOKEN_ACTION, GET_TOKEN_ACTION2, setUserTokenAC } from "../reducers/userReducer";
 import { mutations, queries } from "../../gql";
 // WORKERS
 function* getToken(action) {
@@ -17,11 +17,10 @@ function* getToken(action) {
 }
 
 
-
 function* setUser(action) {
+
   try {
     const { login, password } = action.payload;
-
     const res = yield call(() =>
       client.mutate({
         mutation: mutations.CREATE_NEW_USER,
@@ -48,14 +47,22 @@ function* setUser(action) {
   }
 }
  
- 
+ function* getOrders() {
 
-
-
-
+  const res = yield call(() => client.query({
+    query: queries.GET_ORDERS,
+    variables: {
+      query: JSON.stringify([
+        {},
+      ])
+    }
+  }))
+  console.log('orders', res)
+}
 
 // WATCHER
 export function* userSaga() {
   yield takeEvery(GET_TOKEN_ACTION, getToken);
   yield takeEvery(GET_TOKEN_ACTION2, setUser);
+  yield takeEvery(GET_ORDERS_ACTION, getOrders);
 }

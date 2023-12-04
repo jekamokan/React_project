@@ -18,7 +18,8 @@
   gap: 20px;
   font-size: 18px;
   list-style: none;
-  margin-right: 130px;
+  padding: 0;
+  margin: 0 auto 0 100px;
 }
 .navigation__list a {
   text-decoration: none;
@@ -68,6 +69,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  margin-left: auto;
 }
 .navigation__authorization button {
   padding: 10px 20px;
@@ -122,4 +124,4 @@
   background-color: #fff;
   width: 400px;
   height: 400px;
-}
+}/*# sourceMappingURL=style.css.map */

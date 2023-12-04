@@ -1,8 +1,6 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import HomePage from "../HomePage";
 import Layout from "../Navigation";
-import Cheesecakes from "../Cheesecakes";
-import Cakes from "../Cakes";
 import Products from "../Products";
 import { useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
@@ -37,8 +35,6 @@ const Header = () => {
       <Route index element={<HomePage />} />
       <Route path="Products" element={<Products />} />
       <Route path="Products/:id" element={<SingleProduct />} />
-      <Route path="Cheesecakes" element={<Cheesecakes />} />
-      <Route path="Cakes" element={<Cakes />} />
       <Route path="User/*" element={<User
         setAuthorizationVisible={setAuthorizationVisible}/>} />
       <Route path="Cart" element={<Cart
